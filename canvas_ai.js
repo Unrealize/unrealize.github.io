@@ -94,26 +94,26 @@
     ext.createImageFromURL = function(name, url, callback) {
         images[name] = new Image();
         images[name].addEventListener('load', function() { alert('load '+name);
-            /*const catImage = images[name];
+            var catImage = images[name];
 
-            const math = new dl.NDArrayMathGPU();
+            var math = new dl.NDArrayMathGPU();
             // squeezenet is loaded from https://unpkg.com/deeplearn-squeezenet
-            const squeezeNet = new squeezenet.SqueezeNet(math);
+            var squeezeNet = new squeezenet.SqueezeNet(math);
             await squeezeNet.load();
 
             // Load the image into an NDArray from the HTMLImageElement.
-            const image = dl.Array3D.fromPixels(catImage);
+            var image = dl.Array3D.fromPixels(catImage);
 
             // Predict through SqueezeNet.
-            const inferenceResult = await squeezeNet.predict(image);
+            var inferenceResult = await squeezeNet.predict(image);
 
             // Convert the logits to a map of class to probability of the class.
-            const topClassesToProbs =
+            var topClassesToProbs =
                await squeezeNet.getTopKClasses(inferenceResult.logits, 10);
-            for (const className in topClassesToProbs) {
+            for (var className in topClassesToProbs) {
                 alert(className);
               //console.log(`${topClassesToProbs[className].toFixed(5)}: ${className}`);
-            }*/
+            }
         });
         images[name].src = url;
     };
@@ -393,7 +393,7 @@
     var myPrettyCode = function() {
 
        // Here, do whatever you want
-       alert('hi');
+
     };
 
     loadScript("https://unpkg.com/deeplearn-squeezenet", myPrettyCode);

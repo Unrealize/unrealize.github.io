@@ -93,8 +93,8 @@
 
     ext.createImageFromURL = function(name, url, callback) {
         images[name] = new Image();
-        images[name].addEventListener('load', function() {
-            const catImage = images[name];
+        images[name].addEventListener('load', function() { alert('load '+name);
+            /*const catImage = images[name];
 
             const math = new dl.NDArrayMathGPU();
             // squeezenet is loaded from https://unpkg.com/deeplearn-squeezenet
@@ -113,7 +113,7 @@
             for (const className in topClassesToProbs) {
                 alert(className);
               //console.log(`${topClassesToProbs[className].toFixed(5)}: ${className}`);
-            }
+            }*/
         });
         images[name].src = url;
     };

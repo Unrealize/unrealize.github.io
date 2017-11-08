@@ -352,7 +352,7 @@
 
     ScratchExtensions.register('Canvas', descriptor, ext);
 
-    /*var loadScript = function (url, callback)
+    var loadScript = function (url, callback)
     {
         // Adding the script tag to the head as suggested before
         var head = document.getElementsByTagName('head')[0];
@@ -375,7 +375,7 @@
        alert('hi');
     };
 
-    loadScript("https://unpkg.com/deeplearn-squeezenet", myPrettyCode);*/
+    loadScript("https://unpkg.com/deeplearn-squeezenet", myPrettyCode);
 
 
 })({});
